@@ -2,6 +2,8 @@ package com.csming.thehole.launch;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.WindowManager;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import com.csming.thehole.R;
@@ -16,6 +18,7 @@ public class LaunchActivity extends AppCompatActivity {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 

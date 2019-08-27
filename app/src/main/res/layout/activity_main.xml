@@ -46,7 +46,6 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
             app:backgroundTint="@color/color_212121"
-            app:layout_behavior="com.csming.percent.common.FabScrollBehavior"
             app:rippleColor="@color/color_212121"
             app:srcCompat="@drawable/ic_add" />
 
