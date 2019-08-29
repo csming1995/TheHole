@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">The Hole</string>
+    <string name="app_name">Hole</string>
 
-    <string name="title_launch">Halo World</string>
+    <string name="launcher_title">Halo World</string>
+    <string name="launcher_subtitle">总有一个, 不为人知的你</string>
 
     <string name="title_setting">Setting</string>
 </resources>
