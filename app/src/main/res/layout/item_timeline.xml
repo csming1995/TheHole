@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/color_white">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_header"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center|start"
+                    android:src="@drawable/default_icon"
+                    app:civ_border_width="0dp" />
+
+            <TextView
+                    android:id="@+id/tv_author_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="10dp"
+                    android:text="我"
+                    android:textColor="@color/color_black"
+                    android:textSize="14dp" />
+
+            <TextView
+                    android:id="@+id/tv_create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginTop="28dp"
+                    android:text="2019-08-30 01:23:08"
+                    android:textColor="@color/color_757575"
+                    android:textSize="14dp" />
+
+        </FrameLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- 改成九宫格图片的控件 根据图片数量修改布局 -->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/iv_images"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="200dp"-->
+            <!--                android:scaleType="centerCrop"-->
+            <!--                android:layout_marginBottom="8dp" />-->
+
+            <TextView
+                    android:id="@+id/tv_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:text="好好相处"
+                    android:textColor="@color/color_black"
+                    android:textSize="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

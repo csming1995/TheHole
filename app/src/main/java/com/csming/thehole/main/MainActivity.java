@@ -9,11 +9,15 @@ import android.view.MenuItem;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.lifecycle.ViewModelProviders;
 import com.csming.thehole.R;
+import com.csming.thehole.main.timeline.adapter.TimelineAdapter;
 import com.csming.thehole.main.viewmodel.MainViewModel;
 import javax.inject.Inject;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.material.snackbar.Snackbar;
 import dagger.android.support.DaggerAppCompatActivity;
 
@@ -22,6 +26,10 @@ public class MainActivity extends DaggerAppCompatActivity {
     private Toolbar mToolbar;
 
     private CoordinatorLayout mClRoot;
+
+    private RecyclerView mRvTimeline;
+    private RecyclerView.Adapter mTimelineAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Inject
     ViewModelProvider.Factory factory;
@@ -45,6 +53,7 @@ public class MainActivity extends DaggerAppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        initData();
     }
 
     @Override
@@ -86,6 +95,13 @@ public class MainActivity extends DaggerAppCompatActivity {
 
     private void initView() {
         mClRoot = findViewById(R.id.cl_root);
+
+        // Init Timeline
+        mRvTimeline = findViewById(R.id.rv_timeline);
+        mTimelineAdapter = new TimelineAdapter(10);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRvTimeline.setLayoutManager(mLayoutManager);
+        mRvTimeline.setAdapter(mTimelineAdapter);
     }
 
     private void initData() {
